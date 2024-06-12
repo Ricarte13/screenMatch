@@ -7,8 +7,15 @@ public class Main {
         myMovie.releaseYear = 1990;
         myMovie.durationInMinutes = 180;
 
-        System.out.println(myMovie.name);
-        System.out.println(myMovie.releaseYear);
+        myMovie.displayTechnicalSheet();
+        myMovie.evaluate(8);
+        myMovie.evaluate(9);
+        myMovie.evaluate(7);
+        myMovie.evaluate(8);
+
+        System.out.println(myMovie.avaliation);
+        System.out.println(myMovie.totalAvaliation);
+        System.out.println(myMovie.takeAverage());
 
     }
 }
