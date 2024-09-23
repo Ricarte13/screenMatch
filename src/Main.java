@@ -3,6 +3,8 @@ import br.com.alura.screenMatch.model.Episode;
 import br.com.alura.screenMatch.model.Movie;
 import br.com.alura.screenMatch.model.Serie;
 
+import java.util.ArrayList;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -39,6 +41,22 @@ public class Main {
         RecomendationsFilter filter = new RecomendationsFilter();
         filter.filter(myMovie);
         filter.filter(episode);
+
+        Movie newMovie = new Movie();
+        newMovie.setName("Honey moon");
+        newMovie.setReleaseYear(1990);
+        newMovie.setDirector("Cumpadre Washington");
+
+        ArrayList<Movie> movieList = new ArrayList<>();
+        movieList.add(myMovie);
+        movieList.add(newMovie);
+
+        System.out.println();
+        System.out.println("******************************");
+        System.out.println(movieList);
+
+
+
 
     }
 }
