@@ -9,9 +9,7 @@ import java.util.ArrayList;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Movie myMovie = new Movie();
-        myMovie.setName("Die hard");
-        myMovie.setReleaseYear(1990);
+        Movie myMovie = new Movie("Die hard", 1990);
         myMovie.setDurationInMinutes(180);
         myMovie.setIncludedInThePlan(true);
 
@@ -24,12 +22,10 @@ public class Main {
         System.out.println("Average movie ratings: " + myMovie.takeAverage());
         System.out.println("**************************************");
 
-        Serie serie = new Serie();
-        serie.setName("The Office");
+        Serie serie = new Serie("The Office", 2004);
         serie.setSeasons(9);
         serie.setEpisodesPerSeason(20);
         serie.setMinutesPerEpisodes(21);
-        serie.setReleaseYear(2004);
         serie.displayTechnicalSheet();
         System.out.printf("The time to marathon %s is %d%n", serie.getName(), serie.getDurationInMinutes());
 
@@ -42,9 +38,7 @@ public class Main {
         filter.filter(myMovie);
         filter.filter(episode);
 
-        Movie newMovie = new Movie();
-        newMovie.setName("Honey moon");
-        newMovie.setReleaseYear(1990);
+        Movie newMovie = new Movie("Honey moon", 1990);
         newMovie.setDirector("Cumpadre Washington");
 
         ArrayList<Movie> movieList = new ArrayList<>();

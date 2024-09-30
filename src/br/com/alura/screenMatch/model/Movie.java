@@ -5,6 +5,11 @@ import br.com.alura.screenMatch.calculations.Classificable;
 public class Movie extends Title implements Classificable {
     private String director;
 
+    public Movie(String name, int releaseYear) {
+        super(name, releaseYear);
+    }
+
+
     public String getDirector() {
         return director;
     }
